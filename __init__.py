@@ -25,6 +25,10 @@
 
 
 import serial, glob, sys, time
+import logging
+
+logger = logging.getLogger() 
+logger.setLevel(getattr(logging, 'INFO'))
 
 def scan():
     ''' get available ports '''
@@ -247,8 +251,7 @@ class Pump:
 
         cmd = address + cmd + '\r\n'
 
-        if debug:
-            print cmd
+        logger.debug(cmd)
         # send command to serial port
         self.serialHandle.writelines(cmd)
         
@@ -259,7 +262,6 @@ class Pump:
 
 
 if __name__ == "__main__":
-    debug = False
     p = Pump('/dev/ttyUSB0')
 
     s = p.volume(0.75)  # how much to dispense
