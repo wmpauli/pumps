@@ -267,6 +267,11 @@ if __name__ == "__main__":
     s = p.rate(60) # how fast
     s = p.direction('INF') # pump (not suck) liquid
 
+    s = p.volume(0.75,address=1)  # how much to dispense
+    s = p.diameter(26.77,address=1) # diameter of syringe
+    s = p.rate(60,address=1) # how fast
+    s = p.direction('INF',address=1) # pump (not suck) liquid
+
     print(p.volume()) # how much to dispense
     print(p.diameter()) # diameter of syringe
     print(p.rate()) # how fast
@@ -274,5 +279,6 @@ if __name__ == "__main__":
     
 
     s = p.run(0)
+    s = p.run(1)
     p.delete()
 
