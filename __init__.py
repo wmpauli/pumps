@@ -5,8 +5,8 @@
 # Based on pumps.m master/slave interface for Matlab by ...
 # Lloyd Ung
 #
-# Author: Lloyd Ung
-# created: 2014-09-20
+# Author: Wolfgang M. Pauli
+# created: 2015-11-28
 #
 #    This is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
