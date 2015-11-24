@@ -8,6 +8,7 @@ See below and inline documentation for usage.
 Example
 =====
 
+```
 import pumps
 
 def configure_pumps(volume=.75, diameter=26.77, rate=60, direction='INF', address=0):
@@ -29,5 +30,6 @@ def configure_pumps(volume=.75, diameter=26.77, rate=60, direction='INF', addres
 p = configure_pumps()
 address = 0 # use first pump
 p.run(address) 
+```
 
 Note: This may not work on anything but Ubuntu 14.04. 
