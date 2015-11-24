@@ -34,8 +34,10 @@ def scan():
     ''' get available ports '''
     available = []
     if sys.platform == 'linux2':
+        print "this is a linux2 system"
         # scan for available ports. return a list of device names.
-        ports = glob.glob('/dev/ttyS*') + glob.glob('/dev/ttyUSB*')
+        ports = glob.glob('/dev/ttyUSB*') + glob.glob('/dev/ttyS*') 
+        print "Ports: " + str(ports)
         i = 0
         for port in ports:
             try:
@@ -43,6 +45,7 @@ def scan():
                 available.append( (i, s.portstr))
                 i += 1
                 s.close()
+                print "Port: " + port
             except serial.SerialException:
                 pass
     else: # this may or may not work in windows
